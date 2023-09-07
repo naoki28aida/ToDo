@@ -8,8 +8,17 @@
     background-color: #d1e7dd;
     color: #0f5132;
         margin: 0 auto;
-        padding: 5px 25px;
+        padding: 18px 25px;
 }
+
+.todo__alert--danger{
+    background-color: pink;
+    color: #0f5132;
+    margin: 0 auto;
+    padding: 4px 25px;
+    font-size: 15px;
+}
+
 
 .todo__ttl{
     font-size: 15px;
@@ -48,6 +57,7 @@
     width: 100%;
     height: 40px;
     border: none;
+    cursor: pointer;
 }
 
 .todo__list{
@@ -81,16 +91,20 @@
 .todo__update--item--text{
     width: 200px;
     height: 30px;
-    border: 1px solid #fff;
     font-size: 100%;
     padding: 0 10px;
     font-weight: bold;
+    border: 1px solid #ddd;
 }
 
 .todo__update{
     display: flex;
     justify-content: space-between;
     text-align: center;
+}
+
+.todo__update--button {
+    margin: auto 0;
 }
 
 .todo__update--button--inner {
@@ -102,6 +116,7 @@
     border: none;
     text-align: center;
     width: 60px;
+    cursor: pointer;
 }
 
 .todo__delete--button--inner{
@@ -113,6 +128,7 @@
     border: none;
     text-align: center;
     width: 60px;
+    cursor: pointer;
 }
 
 .todo__table--up, .todo__list--main{

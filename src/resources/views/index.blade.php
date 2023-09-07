@@ -5,10 +5,21 @@
 @endsection
 
 @section('content')
+    @if(session('message'))
 <div class="todo__alert">
   <div class="todo__ttl">
-    Todoを作成しました
+      <li>{{ session('message') }}</li>
   </div>
+    @endif
+    @if ($errors->any())
+        <div class="todo__alert--danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+            </ul>
+        </div>
+    @endif
 </div>
 
 <div class="todo__main">
@@ -29,10 +40,12 @@
         @foreach ($todos as $todo)
         <tr class="todo__list--main">
                     <td class="todo__table--item">
-                        <form class="todo__update" action="/" method="/">
+                        <form class="todo__update" action="/todos/update" method="POST">
+                            @method('PATCH')
                             @csrf
                             <div class="todo__update--item">
-                                <p class="update-form__item-input">{{ $todo['content'] }}</p>
+                                <input class="todo__update--item--text" type="text" name="content" value="{{ $todo['content'] }}">
+                                <input type="hidden" name="id" value="{{ $todo['id'] }}">
                             </div>
                             <div class="todo__update--button">
                                 <button class="todo__update--button--inner" type="submit">更新</button>
@@ -40,9 +53,11 @@
                         </form>
                     </td>
             <td class="todo-table__item">
-                <form class="todo__delete" action="/" method="/">
+                <form class="todo__delete" action="/todos/delete" method="POST">
+                    @method('DELETE')
                     @csrf
                     <div class="todo__delete--button">
+                        <input type="hidden" name="id" value="{{ $todo['id'] }}">
                         <button class="todo__delete--button--inner" type="submit">削除</button>
                     </div>
                 </form>
@@ -53,17 +68,3 @@
     </div>
 </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-

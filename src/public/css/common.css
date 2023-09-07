@@ -1,5 +1,4 @@
 * {
-    cursor: pointer;
     max-width: 1230px;
 }
 
@@ -18,5 +17,5 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    cursor: pointer;
 }
-
