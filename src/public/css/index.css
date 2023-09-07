@@ -1,0 +1,120 @@
+.todo__main{
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 70%;
+}
+
+.todo__alert{
+    background-color: #d1e7dd;
+    color: #0f5132;
+        margin: 0 auto;
+        padding: 5px 25px;
+}
+
+.todo__ttl{
+    font-size: 15px;
+}
+
+.form__todo{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form__todo--area{
+    width: 70%;
+}
+
+.form__todo--text{
+    padding: 0 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 100%;
+}
+
+.form__button{
+    width: 20%;
+}
+
+.form__button--submit{
+    padding: 10px;
+    background-color: black;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    border: none;
+}
+
+.todo__list{
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+}
+
+.todo__list--table{
+    width: 100%;
+}
+
+.todo__table--up{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.todo__list--ttl{
+    padding: 12px 12px 12px 20px;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.todo__table--item {
+        padding: 18px 12px 18px 20px;
+        width: 88%;
+    }
+
+.todo__update--item--text{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #fff;
+    font-size: 100%;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.todo__update{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.todo__update--button--inner {
+    font-size: 14px;
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    width: 60px;
+}
+
+.todo__delete--button--inner{
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    width: 60px;
+}
+
+.todo__table--up, .todo__list--main{
+    border-bottom: 1px solid #ddd;
+}
